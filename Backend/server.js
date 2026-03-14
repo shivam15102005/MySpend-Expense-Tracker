@@ -14,7 +14,11 @@ app.use(express.urlencoded({ extended: true }));
 
 // Middleware to handle cors
 app.use(cors({
-  origin: "https://myspend-expense-tracker-frontend-xr7f.onrender.com",
+  origin: [
+    "https://myspend.live",
+    "https://www.myspend.live",
+    "https://myspend-expense-tracker-frontend-xr7f.onrender.com"
+  ],
   methods: ["GET,HEAD,PUT,PATCH,POST,DELETE"],
   allowedHeaders:["Content-Type", "Authorization"] ,
 
